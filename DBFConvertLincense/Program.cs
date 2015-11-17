@@ -14,7 +14,7 @@ namespace DBFConvertLincense
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new F_RegisterForm());
+            Application.Run(new F_TestInstall());
         }
     }
 }
