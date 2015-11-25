@@ -50,7 +50,7 @@ namespace DBFConvertLincense
 
             lab_status.Text = "已注册";
 
-            gb_registersuccess.Visible = true;
+            //gb_registersuccess.Visible = true;
             gb_noregister.Visible = false;
             gb_registersuccess.Text = "已注册";
             lab_machinecode2.Text = reg._code;
@@ -62,8 +62,9 @@ namespace DBFConvertLincense
         {
             lab_status.Text = "未注册";
 
-            gb_registersuccess.Visible = false;
             gb_noregister.Visible = true;
+            gb_registersuccess.Visible = false;
+            
             gb_noregister.Text = "未注册";
             lab_machinecode.Text = reg._code;
             lab_installtime.Text = reg._installTime;
@@ -114,17 +115,18 @@ namespace DBFConvertLincense
                             }
                             else if (item.Equals("Type")) //Person,Inc
                             {
-                                regModel._activeTime = userRegSetCodeKey.GetValue("Type").ToString();
+                                regModel._type = userRegSetCodeKey.GetValue("Type").ToString();
                             }
                             else if (item.Equals(Lincense.GetMd5("Person")))
                             {
-                                regModel._IncName = item;
-                                regModel._activeTime = userRegSetCodeKey.GetValue(item).ToString();
+                                regModel._IncName = "Person";
+                                
+                                regModel._key = userRegSetCodeKey.GetValue(item).ToString();
                             }
                             else
                             {
-                                regModel._IncName = item;
-                                regModel._activeTime = userRegSetCodeKey.GetValue(item).ToString();
+                                regModel._IncName = "Person";
+                                regModel._key = userRegSetCodeKey.GetValue(item).ToString();
                             }
                         }
                         return regModel;
@@ -181,7 +183,7 @@ namespace DBFConvertLincense
                 string user = reg._IncName;
                 string key = reg._key;
 
-                if (key.Equals(code + user + ",byg,")) 
+                if (Lincense.getInstance().GetCode2(code).Contains(key)) 
                 {
                     flag = true;
                     return flag;
@@ -198,7 +200,7 @@ namespace DBFConvertLincense
 
         private void RegisterSoft() 
         {
-            if(txt_key.Text.Equals( Lincense.getInstance().GetCode(lab_machinecode.Text) ))
+            if(txt_key.Text.Contains( Lincense.getInstance().GetCode2(lab_machinecode.Text) ))
             {
                 Microsoft.Win32.RegistryKey localRegKey = Microsoft.Win32.Registry.LocalMachine;
                 Microsoft.Win32.RegistryKey userRegKey = Microsoft.Win32.Registry.CurrentUser;

@@ -31,6 +31,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.gb_noregister = new System.Windows.Forms.GroupBox();
             this.txt_key = new System.Windows.Forms.TextBox();
+            this.gb_registersuccess = new System.Windows.Forms.GroupBox();
+            this.btn_close2 = new System.Windows.Forms.Button();
+            this.lab_registertime = new System.Windows.Forms.Label();
+            this.lab_installtime2 = new System.Windows.Forms.Label();
+            this.lab_machinecode2 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btn_close1 = new System.Windows.Forms.Button();
             this.btn_register = new System.Windows.Forms.Button();
@@ -40,14 +48,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.gb_registersuccess = new System.Windows.Forms.GroupBox();
-            this.btn_close2 = new System.Windows.Forms.Button();
-            this.lab_registertime = new System.Windows.Forms.Label();
-            this.lab_installtime2 = new System.Windows.Forms.Label();
-            this.lab_machinecode2 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.lab_note = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.lab_status = new System.Windows.Forms.Label();
@@ -67,7 +67,6 @@
             // gb_noregister
             // 
             this.gb_noregister.Controls.Add(this.txt_key);
-            this.gb_noregister.Controls.Add(this.gb_registersuccess);
             this.gb_noregister.Controls.Add(this.label5);
             this.gb_noregister.Controls.Add(this.btn_close1);
             this.gb_noregister.Controls.Add(this.btn_register);
@@ -79,7 +78,7 @@
             this.gb_noregister.Controls.Add(this.label2);
             this.gb_noregister.Location = new System.Drawing.Point(49, 68);
             this.gb_noregister.Name = "gb_noregister";
-            this.gb_noregister.Size = new System.Drawing.Size(616, 261);
+            this.gb_noregister.Size = new System.Drawing.Size(535, 261);
             this.gb_noregister.TabIndex = 1;
             this.gb_noregister.TabStop = false;
             this.gb_noregister.Text = "注册信息";
@@ -90,6 +89,87 @@
             this.txt_key.Name = "txt_key";
             this.txt_key.Size = new System.Drawing.Size(433, 21);
             this.txt_key.TabIndex = 6;
+            // 
+            // gb_registersuccess
+            // 
+            this.gb_registersuccess.Controls.Add(this.btn_close2);
+            this.gb_registersuccess.Controls.Add(this.lab_registertime);
+            this.gb_registersuccess.Controls.Add(this.lab_installtime2);
+            this.gb_registersuccess.Controls.Add(this.lab_machinecode2);
+            this.gb_registersuccess.Controls.Add(this.label10);
+            this.gb_registersuccess.Controls.Add(this.label11);
+            this.gb_registersuccess.Controls.Add(this.label12);
+            this.gb_registersuccess.Location = new System.Drawing.Point(685, 88);
+            this.gb_registersuccess.Name = "gb_registersuccess";
+            this.gb_registersuccess.Size = new System.Drawing.Size(405, 193);
+            this.gb_registersuccess.TabIndex = 1;
+            this.gb_registersuccess.TabStop = false;
+            this.gb_registersuccess.Text = "注册信息";
+            // 
+            // btn_close2
+            // 
+            this.btn_close2.Location = new System.Drawing.Point(119, 137);
+            this.btn_close2.Name = "btn_close2";
+            this.btn_close2.Size = new System.Drawing.Size(75, 23);
+            this.btn_close2.TabIndex = 4;
+            this.btn_close2.Text = "关闭";
+            this.btn_close2.UseVisualStyleBackColor = true;
+            this.btn_close2.Click += new System.EventHandler(this.btn_close1_Click);
+            // 
+            // lab_registertime
+            // 
+            this.lab_registertime.AutoSize = true;
+            this.lab_registertime.Location = new System.Drawing.Point(123, 104);
+            this.lab_registertime.Name = "lab_registertime";
+            this.lab_registertime.Size = new System.Drawing.Size(65, 12);
+            this.lab_registertime.TabIndex = 1;
+            this.lab_registertime.Text = "2015-11-16";
+            // 
+            // lab_installtime2
+            // 
+            this.lab_installtime2.AutoSize = true;
+            this.lab_installtime2.Location = new System.Drawing.Point(123, 74);
+            this.lab_installtime2.Name = "lab_installtime2";
+            this.lab_installtime2.Size = new System.Drawing.Size(65, 12);
+            this.lab_installtime2.TabIndex = 1;
+            this.lab_installtime2.Text = "2015-11-16";
+            // 
+            // lab_machinecode2
+            // 
+            this.lab_machinecode2.AutoSize = true;
+            this.lab_machinecode2.ForeColor = System.Drawing.Color.Red;
+            this.lab_machinecode2.Location = new System.Drawing.Point(123, 46);
+            this.lab_machinecode2.Name = "lab_machinecode2";
+            this.lab_machinecode2.Size = new System.Drawing.Size(71, 12);
+            this.lab_machinecode2.TabIndex = 1;
+            this.lab_machinecode2.Text = "ZXF12345678";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(25, 104);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(65, 12);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "注册时间：";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(37, 74);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(65, 12);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "安装时间：";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(25, 46);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(77, 12);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "您的机器码：";
             // 
             // label5
             // 
@@ -174,88 +254,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "您的机器码：";
             // 
-            // gb_registersuccess
-            // 
-            this.gb_registersuccess.Controls.Add(this.btn_close2);
-            this.gb_registersuccess.Controls.Add(this.lab_registertime);
-            this.gb_registersuccess.Controls.Add(this.lab_installtime2);
-            this.gb_registersuccess.Controls.Add(this.lab_machinecode2);
-            this.gb_registersuccess.Controls.Add(this.label10);
-            this.gb_registersuccess.Controls.Add(this.label11);
-            this.gb_registersuccess.Controls.Add(this.label12);
-            this.gb_registersuccess.Location = new System.Drawing.Point(114, 0);
-            this.gb_registersuccess.Name = "gb_registersuccess";
-            this.gb_registersuccess.Size = new System.Drawing.Size(405, 193);
-            this.gb_registersuccess.TabIndex = 1;
-            this.gb_registersuccess.TabStop = false;
-            this.gb_registersuccess.Text = "注册信息";
-            this.gb_registersuccess.Visible = false;
-            // 
-            // btn_close2
-            // 
-            this.btn_close2.Location = new System.Drawing.Point(119, 137);
-            this.btn_close2.Name = "btn_close2";
-            this.btn_close2.Size = new System.Drawing.Size(75, 23);
-            this.btn_close2.TabIndex = 4;
-            this.btn_close2.Text = "关闭";
-            this.btn_close2.UseVisualStyleBackColor = true;
-            this.btn_close2.Click += new System.EventHandler(this.btn_close1_Click);
-            // 
-            // lab_registertime
-            // 
-            this.lab_registertime.AutoSize = true;
-            this.lab_registertime.Location = new System.Drawing.Point(123, 104);
-            this.lab_registertime.Name = "lab_registertime";
-            this.lab_registertime.Size = new System.Drawing.Size(65, 12);
-            this.lab_registertime.TabIndex = 1;
-            this.lab_registertime.Text = "2015-11-16";
-            // 
-            // lab_installtime2
-            // 
-            this.lab_installtime2.AutoSize = true;
-            this.lab_installtime2.Location = new System.Drawing.Point(123, 74);
-            this.lab_installtime2.Name = "lab_installtime2";
-            this.lab_installtime2.Size = new System.Drawing.Size(65, 12);
-            this.lab_installtime2.TabIndex = 1;
-            this.lab_installtime2.Text = "2015-11-16";
-            // 
-            // lab_machinecode2
-            // 
-            this.lab_machinecode2.AutoSize = true;
-            this.lab_machinecode2.ForeColor = System.Drawing.Color.Red;
-            this.lab_machinecode2.Location = new System.Drawing.Point(123, 46);
-            this.lab_machinecode2.Name = "lab_machinecode2";
-            this.lab_machinecode2.Size = new System.Drawing.Size(71, 12);
-            this.lab_machinecode2.TabIndex = 1;
-            this.lab_machinecode2.Text = "ZXF12345678";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(25, 104);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(65, 12);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "注册时间：";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(37, 74);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(65, 12);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "安装时间：";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(25, 46);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(77, 12);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "您的机器码：";
-            // 
             // lab_note
             // 
             this.lab_note.AutoSize = true;
@@ -288,8 +286,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(703, 378);
+            this.ClientSize = new System.Drawing.Size(1220, 506);
             this.Controls.Add(this.lab_status);
+            this.Controls.Add(this.gb_registersuccess);
             this.Controls.Add(this.gb_noregister);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lab_note);
