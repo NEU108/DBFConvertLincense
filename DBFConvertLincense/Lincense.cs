@@ -228,7 +228,7 @@ namespace DBFConvertLincense
 
             string strAsciiName = null;//用于存储机器码
 
-            strAsciiName = GetMd5(code + "Person" + ",byg,");
+            strAsciiName = GetMd5(code + "Person" + ",byg1,");
             if (strAsciiName.Length >= 24) {
 
                 strAsciiName = strAsciiName.Substring(0, 24);
